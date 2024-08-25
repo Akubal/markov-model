@@ -12,27 +12,27 @@ This project simulates a Markov process involving a collection of weighted coins
   - `K`: A vector where each element represents the number of coins of a specific type.
 - **Returns:** An m×q array `S` where `S[i, j]` indicates the number of coins of type `i` in the urn in state `j`.
 
-### 2. `Transition(S, H)`
+### 2. `GetTransition(S, H)`
 - **Purpose:** Calculates the transition matrix that defines the probability of moving from one state to another based on coin flips.
 - **Parameters:**
   - `S`: The state matrix produced by the `States` function.
   - `H`: A vector where each element is the probability that a coin of a specific type comes up heads.
 - **Returns:** The transition matrix that maps state-to-state changes in the Markov process.
 
-### 3. `Stationary(T)`
+### 3. `GetStationary(T)`
 - **Purpose:** Computes the stationary distribution of the transition matrix, indicating the long-term behavior of the system.
 - **Parameters:**
   - `T`: The transition matrix.
 - **Returns:** A vector representing the stationary distribution of the system's states.
 
-### 4. `ProbFullUrn(T, N)`
+### 4. `GetProbFullUrn(T, N)`
 - **Purpose:** Calculates the probability that the urn will be full on or before a given number of coin flips.
 - **Parameters:**
   - `T`: The transition matrix.
   - `N`: The number of coin flips to consider.
 - **Returns:** A vector of size `N` where each element represents the probability that the urn is full at or before that step.
 
-### 5. `ExpTimeToFill(T, EPS)`
+### 5. `GetExpTimeToFill(T, EPS)`
 - **Purpose:** Estimates the expected number of coin flips required to fill the urn, with a specified accuracy.
 - **Parameters:**
   - `T`: The transition matrix.
